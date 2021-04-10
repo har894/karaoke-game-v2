@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".GeneratePageFragment">
+
+    <EditText
+        android:id="@+id/inputFirstTeam"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="40dp"
+        android:paddingHorizontal="10dp"
+        android:layout_marginTop="40dp"
+        android:textColorHint="#8C8A8A"
+        android:textColor="@color/black"
+        android:background="@drawable/input_shape"
+        android:hint="@string/firstTeamName"/>
+
+    <EditText
+        android:id="@+id/inputSecondTeam"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginTop="20dp"
+        android:paddingHorizontal="10dp"
+
+        android:textColorHint="#8C8A8A"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/inputFirstTeam"
+        android:background="@drawable/input_shape"
+        android:hint="@string/secondTeamName" />
+
+    <TextView
+        android:id="@+id/durationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="@string/durationTitle"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/durationCounter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/durationCounter" />
+
+    <LinearLayout
+        android:id="@+id/durationCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/input_shape"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/inputSecondTeam">
+
+
+        <ImageButton
+            android:id="@+id/downCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/down_button" />
+
+        <TextView
+            android:id="@+id/timeCount"
+            android:layout_width="40dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/upCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/up_button" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pointText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="@string/pointTitle"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/pointCounter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pointCounter" />
+
+    <LinearLayout
+        android:id="@+id/pointCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/input_shape"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/durationCounter">
+
+
+        <ImageButton
+            android:id="@+id/downPointCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/down_button" />
+
+        <TextView
+            android:id="@+id/pointCount"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/upPointCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/up_button" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pPointText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:text="@string/penalyPointTitle"
+        android:textSize="16dp"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="@id/pPointCounter"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/pPointCounter" />
+
+    <LinearLayout
+        android:id="@+id/pPointCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="40dp"
+        android:background="@drawable/input_shape"
+        android:orientation="horizontal"
+        android:paddingVertical="4dp"
+        android:paddingHorizontal="1dp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pointCounter">
+
+
+        <ImageButton
+            android:id="@+id/downpPointCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/down_button" />
+
+        <TextView
+            android:id="@+id/pPointCount"
+            android:layout_width="40dp"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="1dp"
+            android:textAlignment="center"
+            android:textSize="18sp" />
+
+        <ImageButton
+            android:id="@+id/uppPointCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/up_button" />
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/armenianCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        android:buttonTint="@color/mycolor"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pPointCounter" />
+
+    <CheckBox
+        android:id="@+id/russianCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:buttonTint="@color/mycolor"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/armenianCategory" />
+
+    <CheckBox
+        android:id="@+id/otherCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:buttonTint="@color/mycolor"
+        android:textColor="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/russianCategory" />
+
+    <Button
+        android:id="@+id/generateGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="40dp"
+        android:layout_marginBottom="32dp"
+        android:backgroundTint="@color/mycolor"
+        android:text="ԽԱՂԱԼ"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/otherCategory" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
